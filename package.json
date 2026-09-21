@@ -1,35 +1,18 @@
 {
-  "name": "test-nextjs-pages",
-  "version": "0.1.0",
   "private": true,
-  "packageManager": "npm",
-  "dependencies": {
-    "@vinext/cloudflare": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "react-server-dom-webpack": "latest",
-    "vinext": "latest"
-  },
-  "devDependencies": {
-    "@cloudflare/vite-plugin": "latest",
-    "@tailwindcss/postcss": "latest",
-    "@types/node": "^26.6.2",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "@vitejs/plugin-react": "latest",
-    "@vitejs/plugin-rsc": "latest",
-    "tailwindcss": "latest",
-    "typescript": "latest",
-    "vite": "latest",
-    "wrangler": "^4.136.0"
-  },
-  "type": "module",
   "scripts": {
-    "dev": "vinext dev",
-    "build": "vinext build",
-    "start": "wrangler dev --config dist/server/wrangler.json",
-    "deploy": "vinext-cloudflare deploy --config dist/server/wrangler.json",
-    "preview": "npm run build && npm run start --",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv ./worker-configuration.d.ts"
+    "dev": "next",
+    "build": "next build",
+    "start": "serve out"
+  },
+  "dependencies": {
+    "@types/node": "^18.11.5",
+    "@types/react-dom": "^18.0.7",
+    "@types/react": "^18.0.23",
+    "next": "latest",
+    "react-dom": "^18.2.0",
+    "react": "^18.2.0",
+    "serve": "^14.2.0",
+    "typescript": "^4.8.4"
   }
 }

@@ -5,14 +5,15 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "test-nextjs-pages",
-	"main": "src/index.ts",
-	"compatibility_date": "2026-09-16",
-	"compatibility_flags": [
-		"global_fetch_strictly_public"
-	],
+	"compatibility_date": "2026-09-21",
+	"main": "vinext/server/fetch-handler",
 	"assets": {
-		// The path to the directory containing the `index.html` file to be served at `/`
-		"directory": "./public"
+		"directory": "dist/client",
+		"not_found_handling": "none",
+		"binding": "ASSETS"
+	},
+	"images": {
+		"binding": "IMAGES"
 	},
 	"observability": {
 		"enabled": true
